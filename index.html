@@ -1,16 +1,81 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+    <link
+      href="https://fonts.cdnfonts.com/css/cursed-timer-ulil"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
+  <title>Scoreboard</title>
   <body>
-    <div class="container">
-      <div>
-        <h3>HOME</h3>
-      </div>
-      <div>
-        <h3>Away</h3>
-      </div>
-    </div>
+    <main class="container">
+      <!-- Home Section -->
+      <section class="board">
+        <h1 class="title" id="home-title">HOME</h1>
+        <output
+          role="status"
+          class="score"
+          id="score-home"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          0</output
+        >
+        <div class="controls" role="group" aria-label="add points">
+          <button class="btn" id="btn-home-1" aria-label="Add 1 point to home">
+            +1
+          </button>
+          <button class="btn" id="btn-home-2" aria-label="Add 2 point to home">
+            +2
+          </button>
+          <button class="btn" id="btn-home-3" aria-label="Add 3 point to home">
+            +3
+          </button>
+          <button class="btn-reset" id="btn-home-reset">RESET</button>
+        </div>
+      </section>
+
+      <!-- Guest Section -->
+      <section class="board">
+        <h1 class="title" id="guest-title">GUEST</h1>
+        <output
+          role="status"
+          class="score"
+          id="score-guest"
+          aria-live="polite"
+          aria-atomic="true"
+          >0</output
+        >
+        <div class="controls" role="group" aria-label="add points">
+          <button
+            class="btn"
+            id="btn-guest-1"
+            aria-label="Add 1 point to guest"
+          >
+            +1
+          </button>
+          <button
+            class="btn"
+            id="btn-guest-2"
+            aria-label="Add 2 point to guest"
+          >
+            +2
+          </button>
+          <button
+            class="btn"
+            id="btn-guest-3"
+            aria-label="Add 3 point to guest"
+          >
+            +3
+          </button>
+          <button class="btn-reset" id="btn-guest-reset">RESET</button>
+        </div>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
